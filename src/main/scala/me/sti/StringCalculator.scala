@@ -13,6 +13,7 @@ class StringCalculator(rawDigits: String) {
     val delimiter_extractor = "//(.)\n(.*)".r
 
     rawDigits match {
+      case "" => "0"
       case delimiter_extractor(delimiter, digits) => digits.replace(delimiter, ",")
       case _ => rawDigits
     }
