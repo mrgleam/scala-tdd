@@ -1,7 +1,7 @@
 package me.sti
 
 class StringCalculator(rawDigits: String) {
-  require(negative_numbers isEmpty)
+  require(negative_numbers isEmpty, negative_numbers.mkString(","))
 
   def add = (0 /: numbers) { _ + _ } // numbers.foldLeft(0)(_+_)
 
