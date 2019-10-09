@@ -2,6 +2,6 @@ package me.sti
 
 class StringCalculator(digits: String) {
   def add = {
-    0
+    if (digits.length == 0) 0 else 1
   }
 }
