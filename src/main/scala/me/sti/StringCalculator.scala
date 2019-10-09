@@ -5,7 +5,7 @@ class StringCalculator(digits: String) {
     if (digits.length == 0) 0 else {
       val numbers = digits split ","
       if (numbers.length == 1)
-        digits.toInt
+        numbers(0).toInt
       else
         numbers(0).toInt + numbers(1).toInt
     }
