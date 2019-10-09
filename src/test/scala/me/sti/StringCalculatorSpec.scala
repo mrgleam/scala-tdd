@@ -22,5 +22,8 @@ class StringCalculatorSpec extends WordSpec with Matchers {
     "accept new line as delimiter" in {
       new StringCalculator("1\n2").add shouldBe 3
     }
+    "accept custom delimiter" in {
+      new StringCalculator("//;\n1;2").add shouldBe 3
+    }
   }
 }
