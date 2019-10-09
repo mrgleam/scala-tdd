@@ -13,5 +13,8 @@ class StringCalculatorSpec extends WordSpec with Matchers {
     "return 42 for 42" in {
       new StringCalculator("42").add shouldBe 42
     }
+    "return 3 for 1,2" in {
+      new StringCalculator("1,2").add shouldBe 3
+    }
   }
 }
