@@ -19,5 +19,8 @@ class StringCalculatorSpec extends WordSpec with Matchers {
     "return 6 for 1,2,3" in {
       new StringCalculator("1,2,3").add shouldBe 6
     }
+    "accept new line as delimiter" in {
+      new StringCalculator("1\n2").add shouldBe 3
+    }
   }
 }
