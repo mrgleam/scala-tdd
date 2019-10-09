@@ -25,5 +25,10 @@ class StringCalculatorSpec extends WordSpec with Matchers {
     "accept custom delimiter" in {
       new StringCalculator("//;\n1;2").add shouldBe 3
     }
+    "accept only positive numbers" in {
+      an[IllegalArgumentException] shouldBe thrownBy {
+        new StringCalculator("1,-2,-3").add
+      }
+    }
   }
 }
