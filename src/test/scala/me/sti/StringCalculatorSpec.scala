@@ -30,5 +30,10 @@ class StringCalculatorSpec extends WordSpec with Matchers {
         new StringCalculator("1,-2,-3").add
       }
     }
+    "show negative numbers in exception" in {
+      the[IllegalArgumentException] thrownBy {
+        new StringCalculator("1,-2,-3").add
+      } should have message ("requirement failed: -2,-3")
+    }
   }
 }
